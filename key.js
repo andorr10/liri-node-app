@@ -1,4 +1,4 @@
-console.log("this is loaded");
+//console.log("this is loaded");
 
 var twitterKeys = {
   consumer_key: 'E56Qj4S4MrldHNwoaPZ1wdfxQ',
@@ -7,16 +7,24 @@ var twitterKeys = {
   access_token_secret: 'SsPnTlGrjAccA2rXVfg8KzxH4HJtgi6w7VTEM1bEu86oA',
 };
 
-module.exports = twitterKeys;
+var spotifyKeys = {
+  id: "b2095ad3690f4425bfbfc25a14f05a98",
+  secret: "1f80a3d46ccd4a85adf34a5be89a36bd"
+};
 
-var Twitter = require('twitter');
+
+module.exports = {twitterKeys: twitterKeys,
+                  spotifyKeys: spotifyKeys
+                };
+
+//var Twitter = require('twitter');
 
 
 
-var fs = require("fs");
-fs.readFile("./best_things_ever.txt", "utf8", function(error,data){
-  if(error){
-    console.log(error);
-  }
-  console.log("we found no error")
-});
+// var fs = require("fs");
+// fs.readFile("./best_things_ever.txt", "utf8", function(error,data){
+//   if(error){
+//     console.log(error);
+//   }
+//   console.log("we found no error")
+// });
