@@ -5,7 +5,7 @@ var command = process.argv[2];
 var key = require("./key");
 var twitter = require("twitter");
 
-
+function chooseCommand(){
 if (command === "do-what-it-says"){
   doWhatItSays();
 }
@@ -17,6 +17,7 @@ if (command === "spotify-this-song"){
 }
 if (command === "movie-this"){
   omdbFunction();
+}
 }
 
 
@@ -137,7 +138,14 @@ fs.readFile("./random.txt", "utf8", function(error,data){
   }
   else{
     var dataArray = data.split(",");
-    console.log(dataArray);
+    //console.log(dataArray);
+    command = dataArray[0];
+    console.log(command);
+    process.argv[3] = dataArray[1];
+    console.log(process.argv[3]);
+    chooseCommand();
   }
   });
 }
+
+chooseCommand();
