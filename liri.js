@@ -140,9 +140,9 @@ fs.readFile("./random.txt", "utf8", function(error,data){
     var dataArray = data.split(",");
     //console.log(dataArray);
     command = dataArray[0];
-    console.log(command);
+    //console.log(command);
     process.argv[3] = dataArray[1];
-    console.log(process.argv[3]);
+    //console.log(process.argv[3]);
     chooseCommand();
   }
   });
