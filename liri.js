@@ -107,7 +107,7 @@ function omdbFunction() {
     }
   }
 var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=40e9cece";
-console.log(movieName);
+//console.log(movieName);
 request(queryUrl, function(error, response, body) {
   if (!error && response.statusCode === 200) {
     //console.log(JSON.parse(body));
